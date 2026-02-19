@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Adipi Manojkumar - Resume</title>
+<title>Adipi Manojkumar - Resume Builder</title>
 
 <style>
 * {
@@ -14,58 +14,57 @@
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #f5f6f8;
+    background: #eef1f5;
     color: #1a1a1a;
-    padding: 8px; /* Reduced side space */
 }
 
-/* MAIN RESUME CONTAINER */
+/* MAIN CONTAINER - LESS SIDE SPACE */
 .resume-container {
-    width: 100%;
-    max-width: 820px; /* Optimized for A4 */
-    margin: auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 20px auto;
     background: #ffffff;
-    padding: 32px 28px; /* Reduced left & right spacing */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    padding: 35px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     border-radius: 8px;
 }
 
 /* HEADER */
 .header h1 {
-    font-size: 42px;
-    color: #1f2a44;
+    font-size: 38px;
+    color: #111827;
     margin-bottom: 5px;
 }
 
 .role {
-    font-size: 20px;
-    color: #2b6cff;
+    font-size: 18px;
+    color: #374151;
     font-weight: 600;
     margin-bottom: 8px;
 }
 
 .contact {
-    font-size: 15px;
+    font-size: 14px;
     color: #444;
     line-height: 1.6;
 }
 
 .contact a {
-    color: #2b6cff;
+    color: #2563eb;
     text-decoration: none;
 }
 
-/* SECTION TITLE */
+/* SECTION */
 .section {
     margin-top: 26px;
 }
 
 .section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #1f2a44;
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 5px;
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #111827;
+    border-bottom: 2px solid #d1d5db;
+    padding-bottom: 6px;
 }
 
 /* SUMMARY */
@@ -83,17 +82,17 @@ body {
 }
 
 .skills-table th {
-    background: #99959530; /* Light Black (as you requested) */
+    background: #ECEBEB; /* Lite Black */
     color: black;
     text-align: left;
-    padding: 9px 10px;
+    padding: 10px;
     width: 30%;
     font-weight: 600;
 }
 
 .skills-table td {
     background: #ffffff;
-    padding: 9px 10px;
+    padding: 10px;
     border-bottom: 1px solid #e5e7eb;
 }
 
@@ -103,12 +102,12 @@ body {
 }
 
 .project h3 {
-    font-size: 18px;
-    color: #1f2a44;
+    font-size: 17px;
+    color: #111827;
 }
 
 .project a {
-    color: #2b6cff;
+    color: #2563eb;
     text-decoration: none;
     font-weight: 500;
 }
@@ -123,12 +122,11 @@ body {
     line-height: 1.6;
 }
 
-/* EDUCATION */
+/* EDUCATION & STRENGTHS */
 .education p {
     margin-bottom: 6px;
 }
 
-/* STRENGTHS */
 ul.strengths {
     padding-left: 20px;
 }
@@ -143,42 +141,34 @@ ul.strengths li {
 }
 
 button {
-    background: #2b6cff;
+    background: #111827;
     color: white;
     border: none;
     padding: 8px 14px;
-    margin-right: 10px;
+    margin-right: 8px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
 }
 
 button:hover {
-    background: #1e4ed8;
+    background: #000000;
 }
 
-/* PERFECT A4 PRINT (NO EXTRA LEFT/RIGHT SPACE) */
-@page {
-    size: A4;
-    margin: 10mm 8mm; /* Less side margins */
-}
-
+/* PRINT (PERFECT PDF) */
 @media print {
     body {
         background: white;
-        padding: 0;
     }
-
-    .btn-container {
-        display: none;
-    }
-
     .resume-container {
         width: 100%;
-        max-width: 100%;
-        padding: 18mm 14mm; /* Professional PDF padding */
+        margin: 0;
+        padding: 25px;
         box-shadow: none;
         border-radius: 0;
+    }
+    .btn-container {
+        display: none;
     }
 }
 </style>
@@ -190,14 +180,14 @@ button:hover {
 
     <!-- HEADER -->
     <div class="header">
-        <h1>Adipi Manojkumar</h1>
-        <div class="role">
+        <h1 contenteditable="true">Adipi Manojkumar</h1>
+        <div class="role" contenteditable="true">
             Full-Stack Developer (MERN Stack) | React.js • Node.js • MongoDB
         </div>
-        <div class="contact">
+        <div class="contact" contenteditable="true">
             Guntur, Andhra Pradesh, India | 8688219585 | adipimanojkum​ar@gmail.com<br>
-            GitHub: <a href="https://github.com/adipiboby" target="_blank">github.com/adipiboby</a> |
-            Portfolio: <a href="https://adipiportfolio.netlify.app" target="_blank">adipiportfolio.netlify.app</a> |
+            GitHub: github.com/adipiboby |
+            Portfolio: adipiportfolio.netlify.app |
             Open to Remote & Relocation
         </div>
     </div>
@@ -205,83 +195,81 @@ button:hover {
     <!-- SUMMARY -->
     <div class="section">
         <h2>PROFESSIONAL SUMMARY</h2>
-        <p class="summary">
+        <p class="summary" contenteditable="true">
             Highly motivated Full-Stack Developer with strong hands-on experience in building scalable, secure,
             and production-ready web applications using React.js, Node.js, Express.js, and MongoDB.
-            Proficient in implementing JWT authentication, Google OAuth, payment gateway integration (Razorpay),
-            and RESTful APIs. Demonstrated ability to design clean architectures, optimize backend performance,
-            and deliver user-focused solutions. Passionate about modern web technologies, problem-solving,
-            and continuous learning with a goal to contribute to high-impact product teams.
+            Proficient in implementing JWT authentication, Google OAuth, Razorpay payment integration,
+            and RESTful APIs. Passionate about modern web technologies, clean architecture,
+            and delivering real-world user-focused applications.
         </p>
     </div>
 
-    <!-- TECHNICAL SKILLS -->
+    <!-- SKILLS -->
     <div class="section">
         <h2>TECHNICAL SKILLS</h2>
         <table class="skills-table" id="skillsTable">
             <tr>
                 <th>Frontend</th>
-                <td>React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS</td>
+                <td contenteditable="true">React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS</td>
             </tr>
             <tr>
                 <th>Backend</th>
-                <td>Node.js, Express.js, RESTful API Development</td>
+                <td contenteditable="true">Node.js, Express.js, RESTful APIs</td>
             </tr>
             <tr>
                 <th>Database</th>
-                <td>MongoDB, Mongoose, Redis</td>
+                <td contenteditable="true">MongoDB, Mongoose, Redis</td>
             </tr>
             <tr>
                 <th>Authentication & Security</th>
-                <td>JWT, Google OAuth 2.0, Role-Based Access Control</td>
+                <td contenteditable="true">JWT, Google OAuth 2.0, Role-Based Access Control</td>
             </tr>
             <tr>
                 <th>Payments & Integrations</th>
-                <td>Razorpay Payment Gateway, Email Services (Nodemailer)</td>
+                <td contenteditable="true">Razorpay Payment Gateway, Nodemailer</td>
             </tr>
             <tr>
                 <th>Cloud & Tools</th>
-                <td>Git, GitHub, Postman, VS Code, AWS (S3, EC2), Netlify Deployment</td>
+                <td contenteditable="true">Git, GitHub, Postman, VS Code, AWS (S3, EC2), Netlify</td>
             </tr>
         </table>
 
         <div class="btn-container">
             <button onclick="addSkill()">+ Add Skill</button>
+            <button onclick="editSkill()">✏️ Edit Skill Category</button>
         </div>
     </div>
 
-    <!-- PROJECT EXPERIENCE -->
+    <!-- PROJECTS -->
     <div class="section">
         <h2>PROJECT EXPERIENCE</h2>
 
         <div id="projects">
 
             <div class="project">
-                <h3>
+                <h3 contenteditable="true">
                     Storage App – Secure Full-Stack Cloud Storage Platform |
-                    <a href="https://storageapp-frontend-user.netlify.app/" target="_blank">Live Project</a>
+                    https://storageapp-frontend-user.netlify.app/
                 </h3>
-                <ul>
-                    <li>Architected and developed a full-stack cloud storage application using React.js, Node.js, Express.js, and MongoDB.</li>
-                    <li>Implemented secure authentication using JWT and Google OAuth with protected routes and access control.</li>
-                    <li>Designed file upload, download, and folder management system with user-specific authorization.</li>
-                    <li>Integrated Razorpay payment gateway for subscription-based features with secure payment handling.</li>
-                    <li>Built email verification system using OTP with Nodemailer to enhance account security.</li>
-                    <li>Optimized API performance and ensured scalable backend structure for real-world usage.</li>
-                    <li>Deployed production-ready frontend and backend with proper environment configuration.</li>
+                <ul contenteditable="true">
+                    <li>Developed a full-stack cloud storage platform using MERN stack.</li>
+                    <li>Implemented JWT and Google OAuth authentication with secure routes.</li>
+                    <li>Built file upload, download, and folder management system.</li>
+                    <li>Integrated Razorpay subscription-based payment system.</li>
+                    <li>Added OTP email verification using Nodemailer.</li>
+                    <li>Optimized backend APIs for performance and scalability.</li>
                 </ul>
             </div>
 
             <div class="project">
-                <h3>
-                    Countries Explorer – API-Based React Web Application |
-                    <a href="#" target="_blank">Live Project</a>
+                <h3 contenteditable="true">
+                    Countries Explorer – API-Based React Web Application
                 </h3>
-                <ul>
-                    <li>Developed a responsive React.js application to display country data using external REST APIs.</li>
-                    <li>Implemented advanced search, filtering, and sorting functionalities for enhanced user experience.</li>
-                    <li>Optimized API calls using Axios and caching techniques for better performance.</li>
-                    <li>Integrated React Router for seamless navigation and modular component architecture.</li>
+                <ul contenteditable="true">
+                    <li>Built responsive React app using external REST APIs.</li>
+                    <li>Implemented search, filter, and sorting features.</li>
+                    <li>Optimized API calls using Axios and caching.</li>
+                    <li>Used React Router for smooth navigation.</li>
                 </ul>
             </div>
 
@@ -292,58 +280,67 @@ button:hover {
         </div>
     </div>
 
-    <!-- EDUCATION -->
+    <!-- EDUCATION (ADDED CORRECTLY) -->
     <div class="section education">
         <h2>EDUCATION</h2>
-        <p><strong>Bachelor of Engineering (B.E.) in Computer Science and Engineering</strong></p>
-        <p>Study World College of Engineering, Coimbatore, India (2020 – 2024)</p>
-        <p>CGPA: 7.7 / 10</p>
-        <p>Relevant Coursework: Data Structures, Database Management Systems, Web Development</p>
+        <p contenteditable="true"><strong>Bachelor of Engineering (B.E.) in Computer Science and Engineering</strong></p>
+        <p contenteditable="true">Study World College of Engineering, Coimbatore, India (2020 – 2024)</p>
+        <p contenteditable="true">CGPA: 7.7 / 10</p>
+        <p contenteditable="true">Relevant Coursework: Data Structures, DBMS, Web Development</p>
     </div>
 
-    <!-- ADDITIONAL STRENGTHS -->
+    <!-- ADDITIONAL STRENGTHS (ADDED) -->
     <div class="section">
         <h2>ADDITIONAL STRENGTHS</h2>
-        <ul class="strengths">
+        <ul class="strengths" contenteditable="true">
             <li>Strong understanding of full-stack architecture and scalable application design.</li>
-            <li>Hands-on experience with authentication systems, payment integrations, and secure APIs.</li>
-            <li>Experience in real-world deployment using Netlify and cloud services.</li>
-            <li>Quick learner with strong problem-solving mindset and excellent adaptability in team environments.</li>
+            <li>Hands-on experience with authentication systems and payment integrations.</li>
+            <li>Experience deploying real-world projects using Netlify and cloud services.</li>
+            <li>Quick learner with strong problem-solving mindset.</li>
+            <li>Good communication and adaptability in team environments.</li>
         </ul>
     </div>
 
+    <!-- DOWNLOAD -->
     <div class="btn-container">
-        <button onclick="window.print()">Download Resume (PDF)</button>
+        <button onclick="downloadPDF()">⬇ Download Resume (PDF)</button>
     </div>
 
 </div>
 
 <script>
 function addProject() {
-    const title = prompt("Enter Project Name:");
-    const link = prompt("Enter Live Project Link:");
-    const description = prompt("Enter Project Description:");
+    const title = prompt("Enter Project Title:");
+    const desc = prompt("Enter Project Description:");
 
-    if (title && description) {
-        const projectDiv = document.createElement("div");
-        projectDiv.className = "project";
-        projectDiv.innerHTML = `
-            <h3>${title} | <a href="${link}" target="_blank">Live Project</a></h3>
-            <ul><li>${description}</li></ul>
+    if (title && desc) {
+        const div = document.createElement("div");
+        div.className = "project";
+        div.innerHTML = `
+            <h3 contenteditable="true">${title}</h3>
+            <ul contenteditable="true"><li>${desc}</li></ul>
         `;
-        document.getElementById("projects").appendChild(projectDiv);
+        document.getElementById("projects").appendChild(div);
     }
 }
 
 function addSkill() {
-    const category = prompt("Enter Skill Category (e.g., DevOps):");
+    const category = prompt("Enter Skill Category:");
     const skills = prompt("Enter Skills (comma separated):");
 
     if (category && skills) {
         const table = document.getElementById("skillsTable");
         const row = table.insertRow();
-        row.innerHTML = `<th>${category}</th><td>${skills}</td>`;
+        row.innerHTML = `<th>${category}</th><td contenteditable="true">${skills}</td>`;
     }
+}
+
+function editSkill() {
+    alert("You can directly click and edit any skill text (inline editing enabled).");
+}
+
+function downloadPDF() {
+    window.print();
 }
 </script>
 
